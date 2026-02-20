@@ -1,0 +1,28 @@
+{
+  "launch_activated": "IA-Assistent aktiviert",
+  "suggestions_intro": "Du könntest fragen: ",
+  "suggestions_closer": ". <break time=\"0.5s\"/> Was möchtest du wissen?",
+  "reprompt_default": "Du kannst mir eine weitere Frage stellen oder stop sagen, um das Gespräch zu beenden.",
+  "reprompt_with_suggestions": "Du kannst mir eine weitere Frage stellen, 'weiter' sagen, um mehr Vorschläge zu hören, oder stop sagen, um das Gespräch zu beenden.",
+  "generic_error": "Entschuldigung, ich hatte ein Problem mit deiner Anfrage. Bitte versuche es erneut.",
+  "stop_message": "Chat-G.P.T.-Modus wird beendet",
+  "followup_system_prompt": "Du bist ein hilfreicher Assistent, der kurze Folgefragen vorschlägt.",
+  "followup_user_prompt": "Schlage basierend auf dem Gespräch 2 sehr kurze Folgefragen vor (max. 4 Wörter pro Frage). Formuliere sie direkt und einfach. Gib NUR die Fragen zurück, getrennt durch '|'. Beispiel: Was ist die Hauptstadt?|Wie groß ist es?",
+  "followup_questions_prompt": "Folgefragen (durch | getrennt):",
+  "previous_question_prefix": "Vorherige Frage: ",
+  "current_question_prefix": "Aktuelle Frage: ",
+  "fallback_followup_1": "Erzähl mir mehr",
+  "fallback_followup_2": "Gib mir ein Beispiel",
+  "followup_patterns": [
+    "^(was|wie|warum|wann|wo|wer|welche|welcher|welches)\\s+(ist|sind|war|waren|kann|könnte|würde|sollte|wird|über)\\s",
+    "^(und|aber|also|dann|außerdem)\\s",
+    "^(kann|könnte|würde|sollte|wird)\\s+(du|ihr|es|sie|wir)\\s",
+    "^(ist|sind|war|waren|macht|tun)\\s+(es|das|dies|sie|jene)\\s",
+    "^(erzähl mir mehr|mehr details|weiter erklären)\\s*",
+    "^(warum|wie)\\?*$"
+  ],
+  "response_system_prompt": "Du bist ein hilfreicher Assistent. Antworte in 50 Wörtern oder weniger.",
+  "followup_system_prompt_suffix": " Dies ist eine Folgefrage zur vorherigen Unterhaltung. Behalte den Kontext bei, ohne bereits gegebene Informationen zu wiederholen.",
+  "response_error_prefix": "Fehler bei der Antwortgenerierung: ",
+  "clear_context_message": "Ich habe unseren Gesprächsverlauf gelöscht. Worüber möchtest du sprechen?"
+}

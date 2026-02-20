@@ -1,0 +1,28 @@
+{
+  "launch_activated": "Asistente IA activado",
+  "suggestions_intro": "Podrías preguntar: ",
+  "suggestions_closer": ". <break time=\"0.5s\"/> ¿Qué quieres saber?",
+  "reprompt_default": "Puedes hacerme otra pregunta o decir stop para terminar la conversación.",
+  "reprompt_with_suggestions": "Puedes hacerme otra pregunta, decir 'siguiente' para escuchar más sugerencias, o decir stop para terminar la conversación.",
+  "generic_error": "Lo siento, tuve un problema al hacer lo que pediste. Inténtalo de nuevo.",
+  "stop_message": "Saliendo del modo Chat G.P.T.",
+  "followup_system_prompt": "Eres un asistente útil que sugiere preguntas de seguimiento cortas.",
+  "followup_user_prompt": "Según la conversación, sugiere 2 preguntas de seguimiento muy cortas (máx. 4 palabras cada una). Hazlas directas y simples. Devuelve SOLO las preguntas separadas por '|'. Ejemplo: ¿Cuál es la capital?|¿Qué tan grande es?",
+  "followup_questions_prompt": "Preguntas de seguimiento (separadas por |):",
+  "previous_question_prefix": "Pregunta anterior: ",
+  "current_question_prefix": "Pregunta actual: ",
+  "fallback_followup_1": "Cuéntame más",
+  "fallback_followup_2": "Dame un ejemplo",
+  "followup_patterns": [
+    "^(que|qué|como|cómo|por qué|porque|cuando|cuándo|donde|dónde|quien|quién|cual|cuál)\\s+(es|son|fue|eran|puede|podría|debería|será|sobre)\\s",
+    "^(y|pero|entonces|luego|también)\\s",
+    "^(puede|podría|debería|va|puedes|podrías)\\s+(tu|usted|eso|ellos|nosotros)\\s",
+    "^(es|son|fue|eran|hace|hacen)\\s+(eso|esto|aquello|ellos|ellas)\\s",
+    "^(cuéntame más|explica más|más detalle)\\s*",
+    "^(por qué|porque|cómo|como)\\?*$"
+  ],
+  "response_system_prompt": "Eres un asistente útil. Responde en 50 palabras o menos.",
+  "followup_system_prompt_suffix": " Esta es una pregunta de seguimiento de la conversación anterior. Mantén el contexto sin repetir información ya proporcionada.",
+  "response_error_prefix": "Error al generar la respuesta: ",
+  "clear_context_message": "He borrado el historial de nuestra conversación. ¿De qué te gustaría hablar?"
+}
