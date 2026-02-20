@@ -1,5 +1,5 @@
 {
-  "missing_token_error": "Missing COPILOT_API_TOKEN",
+  "missing_token_error": "Missing API_TOKEN",
   "launch_activated": "IA Assistant activated",
   "suggestions_intro": "You could ask: ",
   "suggestions_closer": ". <break time=\"0.5s\"/> What would you like to know?",

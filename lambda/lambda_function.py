@@ -4,16 +4,12 @@ from ask_sdk_core.skill_builder import SkillBuilder
 from ask_sdk_core.handler_input import HandlerInput
 from ask_sdk_model import Response
 import ask_sdk_core.utils as ask_utils
-import requests
 import logging
 import json
 import re
 import os
-
-# GitHub Copilot Chat (GitHub Models-compatible) configuration
-copilot_api_token = ""
-copilot_api_url = "https://models.inference.ai.azure.com/chat/completions"
-model = "gpt-4.1"
+from config import ENABLE_FOLLOWUP_SUGGESTIONS
+from config import AGENT
 
 _LOGGER = logging.getLogger(__name__)
 _LOGGER.setLevel(logging.INFO)
@@ -35,35 +31,6 @@ def get_language_texts(handler_input):
     locale = getattr(handler_input.request_envelope.request, "locale", "en-US") or "en-US"
     language_code = locale.split("-")[0].lower()
     return load_language_file(language_code, "en")
-
-def call_copilot_chat_completion(messages, texts, max_tokens=300, temperature=None, timeout=8):
-    """Calls GitHub Copilot Chat API using an OpenAI-compatible request payload."""
-    if not copilot_api_token:
-        raise ValueError(texts["missing_token_error"])
-
-    headers = {
-        "Authorization": f"Bearer {copilot_api_token}",
-        "Content-Type": "application/json"
-    }
-
-    data = {
-        "model": model,
-        "messages": messages,
-        "max_tokens": max_tokens
-    }
-
-    if temperature is not None:
-        data["temperature"] = temperature
-        
-    _LOGGER.info(f"Requesting: {copilot_api_url} ...")
-    response = requests.post(copilot_api_url, headers=headers, data=json.dumps(data), timeout=timeout)
-    response_data = response.json()
-
-    if not response.ok:
-        error_message = response_data.get("error", {}).get("message", response.text)
-        raise RuntimeError(f"Error {response.status_code}: {error_message}")
-
-    return response_data['choices'][0]['message']['content']
 
 class LaunchRequestHandler(AbstractRequestHandler):
     """Handler for Skill Launch."""
@@ -110,12 +77,14 @@ class GptQueryIntentHandler(AbstractRequestHandler):
         response_data = generate_gpt_response(session_attr["chat_history"], processed_query, texts, is_followup)
         
         # Handle the response data which could be a tuple or string
+        followup_questions = []
         if isinstance(response_data, tuple) and len(response_data) == 2:
-            response_text, followup_questions = response_data
+            response_text = response_data[0]
+            if ENABLE_FOLLOWUP_SUGGESTIONS:
+                followup_questions = response_data[1] or []
         else:
             # Fallback for error cases
             response_text = str(response_data)
-            followup_questions = []
         
         # Store follow-up questions in the session
         session_attr["followup_questions"] = followup_questions
@@ -140,7 +109,7 @@ class GptQueryIntentHandler(AbstractRequestHandler):
         
         # Prepare response with reprompt that includes the follow-up questions
         reprompt_text = texts["reprompt_default"]
-        if 'followup_questions' in session_attr and session_attr['followup_questions']:
+        if followup_questions:
             reprompt_text = texts["reprompt_with_suggestions"]
         
         return (
@@ -227,7 +196,7 @@ def generate_followup_questions(conversation_context, query, response, texts, co
         messages.append({"role": "assistant", "content": response})
         messages.append({"role": "user", "content": texts["followup_questions_prompt"]})
 
-        questions_text = call_copilot_chat_completion(
+        questions_text = AGENT.chat(
             messages=messages,
             texts=texts,
             max_tokens=50,
@@ -268,26 +237,26 @@ def generate_gpt_response(chat_history, new_question, texts, is_followup=False):
     messages.append({"role": "user", "content": new_question})
 
     try:
-        response_text = call_copilot_chat_completion(
+        response_text = AGENT.chat(
             messages=messages,
             texts=texts,
             max_tokens=300,
             timeout=10
         )
 
-        # Generate follow-up questions for the response
-        try:
-            # Always try to generate follow-up questions
-            followup_questions = generate_followup_questions(
-                chat_history + [(new_question, response_text)],
-                new_question,
-                response_text,
-                texts
-            )
-            _LOGGER.info(f"Generated follow-up questions: {followup_questions}")
-        except Exception as e:
-            _LOGGER.error(f"Error generating follow-up questions: {str(e)}")
-            followup_questions = []
+        followup_questions = []
+        if ENABLE_FOLLOWUP_SUGGESTIONS:
+            try:
+                followup_questions = generate_followup_questions(
+                    chat_history + [(new_question, response_text)],
+                    new_question,
+                    response_text,
+                    texts
+                )
+                _LOGGER.info(f"Generated follow-up questions: {followup_questions}")
+            except Exception as e:
+                _LOGGER.error(f"Error generating follow-up questions: {str(e)}")
+                followup_questions = []
 
         return response_text, followup_questions
     except Exception as e:
