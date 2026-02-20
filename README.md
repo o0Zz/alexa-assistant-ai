@@ -60,11 +60,10 @@ In the "Build" section, navigate to the "JSON Editor" tab.
 Just change the "invocationName" to "ia assistant" or another preferred word for activation.
 
 ### 8.
-Set your Lambda environment variables:
+Edit config.py file and Update
 
-- `API_TOKEN`: your GitHub token (or use `GITHUB_TOKEN`)
-- `COPILOT_MODEL`: optional, defaults to `openai/gpt-4.1-mini`
-- `COPILOT_API_URL`: optional, defaults to `https://models.inference.ai.azure.com/chat/completions`
+- `AGENT`: your agent and its token
+- `ENABLE_FOLLOWUP_SUGGESTIONS`: If you want to enable suggestions
 
 ![openai_api_key](images/api_key.png)
 
@@ -80,3 +79,7 @@ You are now ready to use your Alexa in IA Assistant mode. You should see results
 
 Please note that running this skill can incur costs for both AWS Lambda and Models usage once you move beyond free limits. 
 Make sure you understand the pricing structure and monitor your usage to avoid unexpected charges.
+
+## Note
+
+This project has been strongly inspired by https://github.com/k4l1sh/alexa-gpt

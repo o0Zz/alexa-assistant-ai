@@ -1,5 +1,4 @@
 {
-  "missing_token_error": "API_TOKEN manquant",
   "launch_activated": "Assistant IA activé",
   "suggestions_intro": "Vous pouvez demander : ",
   "suggestions_closer": ". <break time=\"0.5s\"/> Que voulez-vous savoir ?",

@@ -196,14 +196,7 @@ def generate_followup_questions(conversation_context, query, response, texts, co
         messages.append({"role": "assistant", "content": response})
         messages.append({"role": "user", "content": texts["followup_questions_prompt"]})
 
-        questions_text = AGENT.chat(
-            messages=messages,
-            texts=texts,
-            max_tokens=50,
-            temperature=0.7,
-            timeout=5
-        ).strip()
-
+        questions_text = AGENT.chat(messages, max_tokens=50, temperature=0.7, timeout=5).strip()
         questions = [q.strip().rstrip('?') for q in questions_text.split('|') if q.strip()]
         questions = [q for q in questions if len(q.split()) <= 4 and len(q) > 0][:count]
 
@@ -237,12 +230,7 @@ def generate_gpt_response(chat_history, new_question, texts, is_followup=False):
     messages.append({"role": "user", "content": new_question})
 
     try:
-        response_text = AGENT.chat(
-            messages=messages,
-            texts=texts,
-            max_tokens=300,
-            timeout=10
-        )
+        response_text = AGENT.chat(messages, max_tokens=300, temperature=0.2, timeout=10)
 
         followup_questions = []
         if ENABLE_FOLLOWUP_SUGGESTIONS:

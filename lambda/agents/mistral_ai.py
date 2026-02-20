@@ -5,15 +5,15 @@ import requests
 _LOGGER = logging.getLogger(__name__)
 
 
-class GitHubCopilotAgent:
-    def __init__(self, model: str = "gpt-4.1", api_token: str = None):
-        self.api_url = "https://models.inference.ai.azure.com/chat/completions"
+class MistralAI:
+    def __init__(self, model: str = "mistral-small-latest", api_token: str = None):
+        self.api_url = "https://api.mistral.ai/v1/chat/completions"
         self.api_token = api_token
         self.model = model
 
     def chat(self, messages, max_tokens=None, temperature=None, timeout=None):
         if not self.api_token:
-            raise ValueError("Github Copilot API token is missing, please set it in the configuration.")
+            raise ValueError("Mistral API token is missing, please set it in the configuration.")
 
         headers = {
             "Authorization": f"Bearer {self.api_token}",
@@ -22,9 +22,11 @@ class GitHubCopilotAgent:
 
         data = {
             "model": self.model,
-            "messages": messages,
-            "max_tokens": max_tokens
+            "messages": messages
         }
+
+        if max_tokens is not None:
+            data["max_tokens"] = max_tokens
 
         if temperature is not None:
             data["temperature"] = temperature
@@ -37,4 +39,9 @@ class GitHubCopilotAgent:
             error_message = response_data.get("error", {}).get("message", response.text)
             raise RuntimeError(f"Error {response.status_code}: {error_message}")
 
-        return response_data["choices"][0]["message"]["content"]
+        content = response_data["choices"][0]["message"]["content"]
+        if isinstance(content, list):
+            text_parts = [part.get("text", "") for part in content if isinstance(part, dict)]
+            return "".join(text_parts).strip()
+
+        return content
