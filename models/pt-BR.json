@@ -29,6 +29,138 @@
                     ]
                 },
                 {
+                    "name": "AIWhatIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "o que é {query}"
+                    ]
+                },
+                {
+                    "name": "AIWhoIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "quem é {query}"
+                    ]
+                },
+                {
+                    "name": "AIWhichIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "qual é {query}"
+                    ]
+                },
+                {
+                    "name": "AIHowIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "como {query}"
+                    ]
+                },
+                {
+                    "name": "AIExplainIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "explique {query}"
+                    ]
+                },
+                {
+                    "name": "AITellMeAboutIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "me fale sobre {query}"
+                    ]
+                },
+                {
+                    "name": "AIDefineIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "defina {query}"
+                    ]
+                },
+                {
+                    "name": "AIWhenIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "quando {query}"
+                    ]
+                },
+                {
+                    "name": "AIWhereIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "onde {query}"
+                    ]
+                },
+                {
+                    "name": "AIWhyIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "por que {query}"
+                    ]
+                },
+                {
+                    "name": "AICompareIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "compare {query}"
+                    ]
+                },
+                {
                     "name": "AMAZON.CancelIntent",
                     "samples": []
                 },

@@ -39,7 +39,8 @@
                     ],
                     "samples": [
                         "qu'est-ce que {query}",
-                        "qu'est ce que {query}"
+                        "qu'est ce que {query}",
+                        "est ce que {query}"
                     ]
                 },
                 {

@@ -29,6 +29,138 @@
                     ]
                 },
                 {
+                    "name": "AIWhatIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "{query} は何"
+                    ]
+                },
+                {
+                    "name": "AIWhoIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "{query} は誰"
+                    ]
+                },
+                {
+                    "name": "AIWhichIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "{query} はどれ"
+                    ]
+                },
+                {
+                    "name": "AIHowIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "{query} はどうやって"
+                    ]
+                },
+                {
+                    "name": "AIExplainIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "{query} を説明して"
+                    ]
+                },
+                {
+                    "name": "AITellMeAboutIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "{query} について教えて"
+                    ]
+                },
+                {
+                    "name": "AIDefineIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "{query} の意味は"
+                    ]
+                },
+                {
+                    "name": "AIWhenIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "{query} はいつ"
+                    ]
+                },
+                {
+                    "name": "AIWhereIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "{query} はどこ"
+                    ]
+                },
+                {
+                    "name": "AIWhyIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "{query} はなぜ"
+                    ]
+                },
+                {
+                    "name": "AICompareIntent",
+                    "slots": [
+                        {
+                            "name": "query",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "{query} を比較して"
+                    ]
+                },
+                {
                     "name": "AMAZON.CancelIntent",
                     "samples": []
                 },
