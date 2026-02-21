@@ -64,7 +64,7 @@ class GptQueryIntentHandler(AbstractRequestHandler):
         # type: (HandlerInput) -> Response
         texts = get_language_texts(handler_input)
         query = handler_input.request_envelope.request.intent.slots["query"].value
-
+       
         session_attr = handler_input.attributes_manager.session_attributes
         if "chat_history" not in session_attr:
             session_attr["chat_history"] = []

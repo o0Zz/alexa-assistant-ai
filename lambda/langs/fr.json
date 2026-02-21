@@ -1,11 +1,11 @@
 {
-  "launch_activated": "Assistant IA activé",
+  "launch_activated": "IA activé",
   "suggestions_intro": "Vous pouvez demander : ",
   "suggestions_closer": ". <break time=\"0.5s\"/> Que voulez-vous savoir ?",
   "reprompt_default": "Vous pouvez me poser une autre question ou dire stop pour terminer la conversation.",
   "reprompt_with_suggestions": "Vous pouvez me poser une autre question, dire 'suivant' pour entendre plus de suggestions, ou dire stop pour terminer la conversation.",
   "generic_error": "Désolé, j'ai eu un problème pour faire ce que vous avez demandé. Veuillez réessayer.",
-  "stop_message": "Sortie du mode Assistant IA",
+  "stop_message": "Sortie du mode IA",
   "followup_system_prompt": "Tu es un assistant utile qui suggère de courtes questions de suivi.",
   "followup_user_prompt": "À partir de la conversation, suggère 2 questions de suivi très courtes (max 4 mots chacune). Fais-les directes et simples. Retourne UNIQUEMENT les questions séparées par '|'. Exemple : Quelle capitale ?|Quelle taille ?",
   "followup_questions_prompt": "Questions de suivi (séparées par |) :",

@@ -1,18 +1,31 @@
 {
     "interactionModel": {
         "languageModel": {
-            "invocationName": "chat",
+            "invocationName": "neo chat",
             "intents": [
                 {
                     "name": "GptQueryIntent",
                     "slots": [
                         {
                             "name": "query",
-                            "type": "AMAZON.Person"
+                            "type": "AMAZON.SearchQuery"
                         }
                     ],
                     "samples": [
-                        "{query}"
+                        "quel est {query}",
+                        "quelle est {query}",
+                        "quels sont {query}",
+                        "quelles sont {query}",
+                        "qui est {query}",
+                        "qui était {query}",
+                        "qu'est-ce que {query}",
+                        "comment {query}",
+                        "explique {query}",
+                        "parle-moi de {query}",
+                        "définis {query}",
+                        "quand {query}",
+                        "où {query}",
+                        "pourquoi {query}"
                     ]
                 },
                 {

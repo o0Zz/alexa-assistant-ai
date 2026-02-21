@@ -1,6 +1,16 @@
-# Alexa AI Assistant
+# Neo chat (Free Alexa AI assistant)
 
-Alexa custom skill that routes user questions to a selectable LLM provider (GitHub Copilot, ChatGPT, Claude, or MistralAI) and returns an answer.
+Neo chat is a custom Alexa skill that routes user questions to a selectable LLM provider (GitHub Copilot, ChatGPT, Claude, MistralAI, ...) and returns an answer.
+
+You can invoke and ask in one sentence, for example:
+
+- "Alexa, ask Neo chat what is the age of George Clooney"
+
+Or you can have a real discussion with it, for example:
+
+- "Alexa, launch Neo chat"
+- "What is the age of george clooney ?"
+- "How many movies did he make?"
 
 <div align="center">
     <img src="images/test.png" />
@@ -32,7 +42,7 @@ Language currently available (In `lambda/langs/`):
 
 ## Prerequisites
 
-- Amazon Developer account: https://developer.amazon.com/
+- Amazon Developer account: https://developer.amazon.com/alexa/console/ask
 - One LLM provider account and API key/token:
     - GitHub token (with `models:read` permission)
     - OpenAI API key
