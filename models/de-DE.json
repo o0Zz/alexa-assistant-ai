@@ -37,7 +37,8 @@
                         }
                     ],
                     "samples": [
-                        "was ist {query}"
+                        "was ist {query}",
+                        "gibt es {query}"
                     ]
                 },
                 {
@@ -49,7 +50,8 @@
                         }
                     ],
                     "samples": [
-                        "wer ist {query}"
+                        "wer ist {query}",
+                        "wer war {query}"
                     ]
                 },
                 {
@@ -61,7 +63,8 @@
                         }
                     ],
                     "samples": [
-                        "welche {query}"
+                        "welche {query}",
+                        "welcher {query}"
                     ]
                 },
                 {
@@ -73,7 +76,8 @@
                         }
                     ],
                     "samples": [
-                        "wie {query}"
+                        "wie {query}",
+                        "wie funktioniert {query}"
                     ]
                 },
                 {
@@ -85,7 +89,8 @@
                         }
                     ],
                     "samples": [
-                        "erkläre {query}"
+                        "erkläre {query}",
+                        "kannst du {query} erklären"
                     ]
                 },
                 {
@@ -97,7 +102,8 @@
                         }
                     ],
                     "samples": [
-                        "erzähl mir von {query}"
+                        "erzähl mir von {query}",
+                        "sag mir mehr über {query}"
                     ]
                 },
                 {
@@ -109,7 +115,8 @@
                         }
                     ],
                     "samples": [
-                        "definiere {query}"
+                        "definiere {query}",
+                        "was bedeutet {query}"
                     ]
                 },
                 {
@@ -145,7 +152,8 @@
                         }
                     ],
                     "samples": [
-                        "warum {query}"
+                        "warum {query}",
+                        "weshalb {query}"
                     ]
                 },
                 {
@@ -157,7 +165,8 @@
                         }
                     ],
                     "samples": [
-                        "vergleiche {query}"
+                        "vergleiche {query}",
+                        "was ist der unterschied zwischen {query}"
                     ]
                 },
                 {

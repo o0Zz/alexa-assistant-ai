@@ -24,7 +24,8 @@
                         }
                     ],
                     "samples": [
-                        "what {query}"
+                        "what {query}",
+                        "is there {query}"
                     ]
                 },
                 {
@@ -72,7 +73,8 @@
                         }
                     ],
                     "samples": [
-                        "explain {query}"
+                        "explain {query}",
+                        "can you explain {query}"
                     ]
                 },
                 {
@@ -84,7 +86,8 @@
                         }
                     ],
                     "samples": [
-                        "tell me about {query}"
+                        "tell me about {query}",
+                        "tell me more about {query}"
                     ]
                 },
                 {
@@ -96,7 +99,8 @@
                         }
                     ],
                     "samples": [
-                        "define {query}"
+                        "define {query}",
+                        "what does {query} mean"
                     ]
                 },
                 {
@@ -144,7 +148,8 @@
                         }
                     ],
                     "samples": [
-                        "compare {query}"
+                        "compare {query}",
+                        "what is the difference between {query}"
                     ]
                 },
                 {

@@ -37,7 +37,9 @@
                         }
                     ],
                     "samples": [
-                        "che cos'è {query}"
+                        "che cos'è {query}",
+                        "c'è {query}",
+                        "esiste {query}"
                     ]
                 },
                 {
@@ -49,7 +51,8 @@
                         }
                     ],
                     "samples": [
-                        "chi è {query}"
+                        "chi è {query}",
+                        "chi era {query}"
                     ]
                 },
                 {
@@ -61,7 +64,8 @@
                         }
                     ],
                     "samples": [
-                        "qual è {query}"
+                        "qual è {query}",
+                        "quale {query}"
                     ]
                 },
                 {
@@ -85,7 +89,8 @@
                         }
                     ],
                     "samples": [
-                        "spiega {query}"
+                        "spiega {query}",
+                        "puoi spiegare {query}"
                     ]
                 },
                 {
@@ -97,7 +102,8 @@
                         }
                     ],
                     "samples": [
-                        "parlami di {query}"
+                        "parlami di {query}",
+                        "dimmi di {query}"
                     ]
                 },
                 {
@@ -109,7 +115,8 @@
                         }
                     ],
                     "samples": [
-                        "definisci {query}"
+                        "definisci {query}",
+                        "cosa significa {query}"
                     ]
                 },
                 {
@@ -145,7 +152,8 @@
                         }
                     ],
                     "samples": [
-                        "perché {query}"
+                        "perché {query}",
+                        "per quale motivo {query}"
                     ]
                 },
                 {
@@ -157,7 +165,8 @@
                         }
                     ],
                     "samples": [
-                        "confronta {query}"
+                        "confronta {query}",
+                        "qual è la differenza tra {query}"
                     ]
                 },
                 {

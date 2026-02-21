@@ -40,7 +40,10 @@
                     "samples": [
                         "qu'est-ce que {query}",
                         "qu'est ce que {query}",
-                        "est ce que {query}"
+                        "est ce que {query}",
+                        "est ce qu'il y a {query}",
+                        "est-ce qu'il y a {query}",
+                        "y a-t-il {query}"
                     ]
                 },
                 {
@@ -79,7 +82,8 @@
                         }
                     ],
                     "samples": [
-                        "explique {query}"
+                        "explique {query}",
+                        "peux-tu expliquer {query}"
                     ]
                 },
                 {
@@ -92,7 +96,8 @@
                     ],
                     "samples": [
                         "parle-moi de {query}",
-                        "parle moi de {query}"
+                        "parle moi de {query}",
+                        "parle moi davantage de {query}"
                     ]
                 },
                 {
@@ -105,7 +110,10 @@
                     ],
                     "samples": [
                         "définis {query}",
-                        "definis {query}"
+                        "definis {query}",
+                        "que signifie {query}",
+                        "Comment dit-on {query}",
+                        "Que veut dire {query}"
                     ]
                 },
                 {
@@ -142,7 +150,8 @@
                         }
                     ],
                     "samples": [
-                        "pourquoi {query}"
+                        "pourquoi {query}",
+                        "pour quelle raison {query}"
                     ]
                 },
                 {
@@ -154,7 +163,8 @@
                         }
                     ],
                     "samples": [
-                        "compare {query}"
+                        "compare {query}",
+                        "quelle différence entre {query}"
                     ]
                 },
                 {
