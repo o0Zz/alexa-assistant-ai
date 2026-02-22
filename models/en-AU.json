@@ -16,18 +16,6 @@
                     ]
                 },
                 {
-                    "name": "AIHowIntent",
-                    "slots": [
-                        {
-                            "name": "searchquery",
-                            "type": "AMAZON.SearchQuery"
-                        }
-                    ],
-                    "samples": [
-                        "how {searchquery}"
-                    ]
-                },
-                {
                     "name": "AIWhatIntent",
                     "slots": [
                         {
@@ -62,6 +50,18 @@
                     ],
                     "samples": [
                         "which {searchquery}"
+                    ]
+                },
+                {
+                    "name": "AIHowIntent",
+                    "slots": [
+                        {
+                            "name": "searchquery",
+                            "type": "AMAZON.SearchQuery"
+                        }
+                    ],
+                    "samples": [
+                        "how {searchquery}"
                     ]
                 },
                 {
